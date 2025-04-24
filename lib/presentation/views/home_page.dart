@@ -19,7 +19,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //todo: Drawer
       drawer: SafeArea(child: Drawer(child: CustomDrawer())),
+      //todo: Appbar
       appBar: AppBar(
         backgroundColor: Color(0xff1fd281),
         foregroundColor: Colors.white,
@@ -29,6 +31,8 @@ class _HomePageState extends State<HomePage> {
           IconButton(onPressed: () {}, icon: Icon(Icons.search, size: 30)),
         ],
       ),
+
+      //todo: Body
       body: SingleChildScrollView(
         child: Column(
           spacing: 5,
@@ -52,18 +56,27 @@ class _HomePageState extends State<HomePage> {
             ),
             Column(children: [HomePageAppsWidget()]),
             Divider(thickness: 4, color: Color(0xffebeaea)),
+            Text(
+              "Developed by Sazid",
+              style: TextStyle(fontSize: 20, color: Colors.lightBlueAccent),
+            ),
           ],
         ),
       ),
+
+      //todo:Floating Action Button - FAB
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         spacing: 10,
         children: [
+          //todo: Notification button
           CustomFloatingAb(
             fabColor: Color(0xfff7b52d),
             fabIcon: Icons.notifications,
           ),
+          //todo: Share button
           CustomFloatingAb(fabColor: Color(0xfffa6410), fabIcon: Icons.share),
+          //todo: Chat button
           CustomFloatingAb(
             fabColor: Color(0xff31b25e),
             fabIcon: Icons.chat_bubble,
